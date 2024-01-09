@@ -1,0 +1,379 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+[class*="col-"] {
+  float: left;
+}
+body,
+html {
+  height: 100%;
+}
+/* CONTAINER */
+.container {
+  height: 100%;
+}
+.container::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+/* NAVBAR MENU */
+.nav {
+  background-color: rgb(41, 41, 41);
+  height: 100%;
+  padding: 10px 15px 10px 15px;
+  color: white;
+}
+
+.nav .nav-header {
+  margin: 10px 0 20px 0;
+  padding: 0 0 15px 0;
+  border-bottom: 1px solid white;
+}
+
+.nav-header .a-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav-header .a-logo img {
+  width: 40%;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+}
+
+.nav-header .a-logo h4 {
+  margin-left: 15px;
+}
+
+.nav .menu {
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid rgb(85, 85, 85);
+  display: flex;
+}
+
+.nav .menu:hover {
+  background-color: rgb(54, 54, 54);
+}
+
+.menu .a {
+  margin-left: 10px;
+}
+
+/* DASHBOARD CONTENT */
+.dashboard {
+  height: 100%;
+  overflow: auto;
+}
+.dashboard-header {
+  min-height: 7vh;
+  display: flex;
+  justify-content: right;
+  align-content: center;
+  padding: 10px 20px 10px 20px;
+  border-bottom: 1px solid rgb(233, 233, 233);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-header span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-content {
+  height: 100%;
+  padding: 20px 20px 20px 20px;
+}
+
+.filter-orderby {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  background-color: rgb(61, 61, 61);
+  border-radius: 5px;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.filter-orderby select {
+  padding: 8px;
+  margin: 5px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* .filter-orderby input {
+    padding: 8px;
+    margin: 5px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+} */
+
+/* Optional: Styling for Option Elements within Select */
+.filter-orderby select option {
+  font-size: 14px;
+}
+
+/* Optional: Styling for Placeholder Option */
+.filter-orderby option[value=""] {
+  color: #999;
+}
+
+/* Styling for Button */
+.filter-orderby #submit {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.filter-orderby button:hover {
+  background-color: #45a049; /* Warna latar belakang tombol saat dihover */
+}
+
+/* Optional: Active effect */
+.filter-orderby button:active {
+  background-color: #3e8e41; /* Warna latar belakang tombol saat diklik */
+}
+
+.list-akomodasi {
+  background-color: white;
+  border-top: black;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.list-akomodasi .card {
+  width: 100%;
+  background: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.list-akomodasi .card .img-card {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.list-akomodasi .card .img-card img {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10px;
+}
+.list-akomodasi .card .description {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 30px;
+  height: 100%;
+}
+.list-akomodasi .card .description h2 {
+  font-size: larger;
+  text-align: center;
+}
+.list-akomodasi .card .description .tools {
+  display: flex;
+  justify-content: space-between;
+}
+.list-akomodasi .card .description .tools a {
+  font-weight: 600;
+  margin-top: auto;
+  color: white;
+  background-color: rgba(54, 54, 54, 0.933);
+  text-decoration: none;
+  padding: 10px;
+  width: 45%;
+  text-align: center;
+}
+
+.list-akomodasi .card .description .tools #delete {
+  background-color: rgb(226, 77, 77);
+}
+
+/* TEMPLATE COLUMN DOCUMENT */
+
+@media only screen and (min-width: 960px) {
+  .col-1 {
+    width: 8.33%;
+  }
+
+  .col-2 {
+    width: 16.66%;
+  }
+
+  .col-3 {
+    width: 25%;
+  }
+
+  .col-4 {
+    width: 33.33%;
+  }
+
+  .col-5 {
+    width: 41.66%;
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-7 {
+    width: 58.33%;
+  }
+
+  .col-8 {
+    width: 66.66%;
+  }
+
+  .col-9 {
+    width: 75%;
+  }
+
+  .col-10 {
+    width: 83.33%;
+  }
+
+  .col-11 {
+    width: 91.66%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .col-s-1 {
+    width: 8.33%;
+  }
+
+  .col-s-2 {
+    width: 16.66%;
+  }
+
+  .col-s-3 {
+    width: 25%;
+  }
+
+  .col-s-4 {
+    width: 33.33%;
+  }
+
+  .col-s-5 {
+    width: 41.66%;
+  }
+
+  .col-s-6 {
+    width: 50%;
+  }
+
+  .col-s-7 {
+    width: 58.33%;
+  }
+
+  .col-s-8 {
+    width: 66.66%;
+  }
+
+  .col-s-9 {
+    width: 75%;
+  }
+
+  .col-s-10 {
+    width: 83.33%;
+  }
+
+  .col-s-11 {
+    width: 91.66%;
+  }
+
+  .col-s-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .col-x-1 {
+    width: 8.33%;
+  }
+
+  .col-x-2 {
+    width: 16.66%;
+  }
+
+  .col-x-3 {
+    width: 25%;
+  }
+
+  .col-x-4 {
+    width: 33.33%;
+  }
+
+  .col-x-5 {
+    width: 41.66%;
+  }
+
+  .col-x-6 {
+    width: 50%;
+  }
+
+  .col-x-7 {
+    width: 58.33%;
+  }
+
+  .col-x-8 {
+    width: 66.66%;
+  }
+
+  .col-x-9 {
+    width: 75%;
+  }
+
+  .col-x-10 {
+    width: 83.33%;
+  }
+
+  .col-x-11 {
+    width: 91.66%;
+  }
+
+  .col-x-12 {
+    width: 100%;
+  }
+}
